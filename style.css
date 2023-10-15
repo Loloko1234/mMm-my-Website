@@ -1,12 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 header {
   text-align: center;
   position: relative;
   height: 100px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .login-container {
   position: relative;
@@ -119,6 +119,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .a--hover {
@@ -173,4 +174,56 @@ input::placeholder {
 
 .subcategory a {
   margin: 10px;
+}
+.naglowek-main {
+  font-size: 33px;
+  padding-right: 68rem;
+  padding-top: 3rem;
+}
+.main {
+  text-align: center;
+}
+
+.item--dobre {
+  display: inline-block;
+  max-width: 300px;
+  margin: 10px;
+  border: grey 1px solid;
+  width: 200px;
+  height: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px black;
+}
+.zdjecia-main {
+  max-width: 200px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.cena {
+  padding-top: 20px;
+  font-size: 25px;
+}
+.nazwa-itemy {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item--dobre--link {
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-family: Helvetica;
+  font-size: 15px;
+}
+hr {
+  width: 72%;
+  margin: 0 auto;
+}
+.item--dobre:hover {
+  background-color: rgb(228, 228, 228);
 }
