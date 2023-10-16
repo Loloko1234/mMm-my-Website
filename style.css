@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: "MyFont";
+  src: url("Manrope-VariableFont_wght.ttf");
+}
+
 header {
   text-align: center;
   position: relative;
@@ -40,6 +45,7 @@ header {
 
 .login-container:hover .login-panel {
   display: block;
+  z-index: 1000;
 }
 #Login {
   padding: 10px;
@@ -81,7 +87,9 @@ header {
 input::placeholder {
   color: #999;
   font-style: italic;
-  padding: 10px;
+}
+#search {
+  text-indent: 15px;
 }
 .koszyk-container {
   position: relative;
@@ -106,6 +114,7 @@ input::placeholder {
 
 .koszyk-container:hover .koszyk-panel {
   display: block;
+  z-index: 1000;
 }
 .login-container {
   display: flex;
@@ -200,6 +209,7 @@ input::placeholder {
 }
 .zdjecia-main {
   max-width: 200px;
+  max-height: 110px;
   padding-top: 50px;
   padding-bottom: 30px;
 }
@@ -211,6 +221,7 @@ input::placeholder {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 16px;
 }
 .item--dobre--link {
   text-decoration: none;
@@ -226,4 +237,120 @@ hr {
 }
 .item--dobre:hover {
   background-color: rgb(228, 228, 228);
+  box-shadow: 0 1px 1px black;
+}
+.naglowek--bottom1 {
+  padding-right: 62%;
+}
+.container {
+  display: flex;
+  height: 700px;
+}
+
+.half1 {
+  flex: 1;
+  text-align: center;
+  padding-left: 14%;
+  padding-top: 5%;
+  max-width: 50%;
+}
+.half {
+  flex: 1;
+  padding: 20px;
+  padding-right: 300px;
+  text-align: center;
+  padding-top: 5%;
+  max-width: 600px;
+}
+.zdjecie-podstrona {
+  max-width: 700px;
+  max-height: 650px;
+  width: 600px;
+  height: 400px;
+  margin-right: 40px;
+}
+.opis {
+  float: left;
+  text-align: left;
+}
+.zdjecie-podstrona:hover {
+  background-color: #f1f1f1;
+}
+.Ocena--podstrona {
+  font-size: 25px;
+  padding-top: 10px;
+}
+.naglowek--cena {
+  color: #24b9d7;
+  font-family: sans-serif;
+  padding-top: 10px;
+  font-size: 50px;
+}
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-input {
+  width: 40px;
+  margin-top: 50px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid white;
+  margin-left: 5px;
+  border: grey solid 1px;
+  border-right: 0px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.decrease-button,
+.increase-button {
+  background-color: white;
+  border: 1px solid white;
+  border: grey solid 1px;
+  padding: 5px 10px;
+  cursor: pointer;
+  max-height: 21px;
+  max-width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decrease-button:hover,
+.increase-button:hover {
+  background-color: #e0e0e0;
+}
+.increase-button {
+  margin-top: 50px;
+  border-bottom: 0px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.button--podstrona {
+  margin-top: 50px;
+  border: none;
+  background-color: #24b9d7;
+  width: 280px;
+  height: 42px;
+  color: white;
+  font-weight: 600;
+  font-family: MyFont;
+  font-size: 20px;
+}
+#quantity-inputt {
+  text-indent: 12px;
 }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="" id="logo--top" />
+      <input type="text" name="" id="search" placeholder="Czego szukasz?" />
+      <!---------------Login ----------->
+      <div class="login-container">
+        <a class="login-button">Zaloguj się</a>
+        <div class="login-panel">
+          <form>
+            <input type="text" name="Login" id="Login" placeholder="Email" />
+            <input type="text" name="Login" id="Login" placeholder="Hasło" />
+            <input type="button" value="ZALOGUJ SIE" id="login--button" />
+            <!----------Linki Login ------->
+            <a
+              href="http://https://sklep.kfd.pl/odzyskiwanie-hasla"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="Login--links"
+              >Zapomniałeś hasła?</a
+            ><br id="spacja" />
+            <a
+              href="http://https://sklep.kfd.pl/odzyskiwanie-hasla"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="Login--links"
+              >Brak Konta?</a
+            >
+          </form>
+        </div>
+      </div>
+      <div class="koszyk-container">
+        <a id="koszyk" class="login-button">Koszyk</a>
+        <div class="koszyk-panel">
+          <h1>asdasd</h1>
+        </div>
+      </div>
+      <!------------Koniec Login--------------->
+    </header>
+    <!--------Lower Header--------->
+    <!-------Zrobic zeby a wypełniało całego spana-->
+    <div class="lower--header">
+      <span class="a--hover" href="#">
+        <a href="http://" class="a--header--lower"
+          >KATEGORIE
+          <i class="fa-solid fa-caret-down" style="color: #ffffff"></i
+        ></a>
+        <div class="subcategory">
+          <a href="https://www.facebook.com" id="subcategory--a"
+            >Klawiatura Gamingowa Spc Gear##########</a
+          >
+          <p>Podkategoria 2</p>
+          <p>Podkategoria 3</p>
+          <p>Podkategoria 3</p>
+          <p>Podkategoria 3</p>
+          <p>Podkategoria 3</p>
+        </div>
+      </span>
+      <span class="a--hover" href="#">
+        <a href="http://" class="a--header--lower"
+          >PRODUCENCI
+          <i class="fa-solid fa-caret-down" style="color: #ffffff"></i
+        ></a>
+
+        <div class="subcategory">
+          <p>Podkategoria 1</p>
+          <p>Podkategoria 2</p>
+          <p>Podkategoria 3</p>
+          <p>Podkategoria 3</p>
+          <p>Podkategoria 3</p>
+          <p>Podkategoria 3</p>
+        </div>
+      </span>
+      <a class="a--hover" href="#">
+        <i class="fa-solid fa-truck" style="color: #ffffff"></i>
+        DOSTAWA/PŁATNOŚĆ
+      </a>
+      <a class="a--hover" href="#">
+        <i class="fa-solid fa-heart" style="color: #ffffff"></i> O mMm
+      </a>
+      <a class="a--hover" href="#">
+        <i class="fa-regular fa-circle-question"></i> POMOC
+      </a>
+      <a class="a--hover" href="#">
+        <i class="fa-solid fa-envelope" style="color: #ffffff"></i> KONTAKT
+      </a>
+    </div>
+    <div class="container">
+      <div class="half1">
+        <div class="box--zdjecie">
+          <img src="klawiatura.png" alt="" class="zdjecie-podstrona" />
+        </div>
+      </div>
+      <div class="half">
+        <div class="opis">
+          <h1 class="naglowek--podstrona">Klawiatura Spc Gear</h1>
+          <p class="Ocena--podstrona">
+            <i> Ocena </i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i
+            ><i class="fa-regular fa-star-half-stroke"></i>
+          </p>
+          <br />
+          <h1 class="naglowek--cena">149.99 zł</h1>
+          <div class="quantity-control">
+            <input
+              type="button"
+              value="Dodaj Do Koszyka"
+              class="button--podstrona"
+            />
+            <input
+              class="quantity-input"
+              type="number"
+              min="1"
+              max="100"
+              value="1"
+              readonly
+              id="quantity-inputt"
+            />
+            <div class="button-container">
+              <button class="increase-button" onclick="increase()">
+                <i class="fa-solid fa-caret-up"></i>
+              </button>
+              <button class="decrease-button" onclick="decrease()">
+                <i class="fa-solid fa-caret-down"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Opis</p>
+      <p>Sposób użycia</p>
+      <p>Opinie i oceny</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
