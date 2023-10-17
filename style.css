@@ -331,14 +331,15 @@ hr {
 }
 .footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
+  padding-left: 10%;
+  margin-top: -140px;
 }
 
 .footer p {
   margin: 0;
   padding: 10px;
-  border: 1px solid #ccc;
 }
 .button--podstrona {
   margin-top: 50px;
@@ -353,4 +354,66 @@ hr {
 }
 #quantity-inputt {
   text-indent: 12px;
+}
+.change {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  letter-spacing: 1px;
+}
+.change:hover {
+  content: "";
+  display: block;
+  border-bottom: 5px solid #24b9d7;
+  margin-bottom: -5px;
+  border-radius: 3px;
+}
+.hr-footer {
+  width: 80%;
+  margin-top: 2px;
+}
+.lower--footer {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 10%;
+}
+.content--footer {
+  width: 70%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+.table-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-column {
+  flex-basis: 48%;
+  padding-bottom: 40px;
+}
+
+.table-wrapper {
+  font-size: 30px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 3px solid black;
+}
+li span:first-child {
+  color: grey;
+  font-size: 20px;
+}
+li span:nth-child(2) {
+  font-size: 25px;
+}
+.content-lower {
+  font-weight: bold;
 }
