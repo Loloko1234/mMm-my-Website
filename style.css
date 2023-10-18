@@ -162,7 +162,7 @@ input::placeholder {
   background: white;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
   width: 300px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 10px;
   text-decoration: none;
 }
@@ -222,6 +222,10 @@ input::placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 16px;
+  font-family: myfont;
+  color: black;
+  font-weight: 400;
+  margin: 0 20px;
 }
 .item--dobre--link {
   text-decoration: none;
@@ -245,6 +249,7 @@ hr {
 .container {
   display: flex;
   height: 700px;
+  font-family: myfont;
 }
 
 .half1 {
@@ -385,6 +390,10 @@ hr {
   align-items: left;
   font-size: 30px;
   padding-bottom: 30px;
+  font-family: myfont;
+}
+#content {
+  font-family: myfont;
 }
 .table-container {
   display: flex;
@@ -416,4 +425,32 @@ li span:nth-child(2) {
 }
 .content-lower {
   font-weight: bold;
+}
+.kategorie {
+  font-size: 20px;
+  margin: 10px;
+}
+.a--kategorie {
+  margin: 20px;
+  margin-bottom: 1000px;
+}
+/* O mMm */
+.a--mmm {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.main-mmm {
+  float: left;
+  padding-left: 16%;
+  max-width: 70%;
+  font-family: myfont;
+}
+.h1-mmm {
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+.h1-mmmfirst {
+  padding-left: 15%;
+  padding-top: 50px;
+  font-family: myfont;
 }
