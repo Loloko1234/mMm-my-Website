@@ -461,3 +461,79 @@ li span:nth-child(2) {
   font-family: myfont;
   padding-left: 16%;
 }
+.kontakt {
+  font-family: myfont;
+}
+.kontakt label {
+  padding-right: 30px;
+}
+
+.input-kontakt {
+  margin: 5px 0;
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+  text-indent: 10px;
+  font-size: 15px;
+  border: 1px solid rgb(134, 134, 134);
+  background-color: #dbdbdb;
+  margin-bottom: 10px;
+}
+.kontakt {
+  padding-left: 35%;
+  padding-top: 2%;
+}
+.label-kontakt {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+.kontakt input {
+  display: inline-block;
+  color: #4b4b4b;
+}
+.naglowek-kontakt {
+  padding-left: 30%;
+  padding-top: 50px;
+  font-family: myfont;
+}
+#wiadomosc {
+  width: 800px;
+  height: 100px;
+  margin: 5px 0;
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+  text-indent: 10px;
+  font-size: 15px;
+  border: 1px solid rgb(134, 134, 134);
+  background-color: #dbdbdb;
+}
+#zgoda {
+  margin: 5px 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  font-size: 15px;
+  border: 1px solid rgb(134, 134, 134);
+  background-color: #dbdbdb;
+  left: 130px;
+  position: relative;
+}
+.zgoda {
+  padding-left: 10px;
+  left: 130px;
+  position: relative;
+}
+.button--podstrona {
+  background-color: #24b9d7;
+  width: 300px;
+  height: 42px;
+  color: white;
+  font-weight: 600;
+  font-family: MyFont;
+  font-size: 20px;
+  left: 100px;
+  position: relative;
+}
