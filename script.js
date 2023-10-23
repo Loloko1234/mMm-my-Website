@@ -129,3 +129,18 @@ function displayTable() {
 
   content.innerHTML = tableContent;
 }
+function togglePasswordVisibility() {
+  const passwordField = document.getElementById("temat");
+  const passwordDisplay = document.getElementById("temat");
+  const showPasswordButton = document.querySelector(".show-password");
+
+  if (passwordField.type === "password") {
+    passwordDisplay.textContent = passwordField.value;
+    passwordField.type = "text";
+    showPasswordButton.textContent = "Ukryj";
+  } else {
+    passwordDisplay.textContent = "";
+    passwordField.type = "password";
+    showPasswordButton.textContent = "Pokaż";
+  }
+}
