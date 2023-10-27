@@ -144,3 +144,30 @@ function togglePasswordVisibility() {
     showPasswordButton.textContent = "Pokaż";
   }
 }
+function kontakt() {
+  let zgoda = document.getElementById("zgoda");
+  let email = document.getElementById("email").value;
+  let temat = document.getElementById("temat").value;
+  let wiadomosc = document.getElementById("wiadomosc").value;
+  if (zgoda.checked) {
+    if (email == "") {
+      console.log("podaj email");
+    }
+    if (temat == "") {
+      console.log("podaj temta");
+    }
+    if (wiadomosc == "") {
+      console.log("podaj wiadomosc");
+    }
+  } else {
+    alert(
+      "Przed wysłaniem wiadomości, należy wyrazić zgodę na przetwarzanie danych osobowych w celu obsługi zgłoszenia."
+    );
+
+    let zgodastyle = document.querySelector(".zgoda");
+    zgodastyle.style.color = "#d0121a";
+    zgodastyle.style.border = "2px dashed #d0121a";
+    let zgodastyle1 = document.querySelector("#zgoda");
+    zgodastyle1.style.borderColor = "red";
+  }
+}
