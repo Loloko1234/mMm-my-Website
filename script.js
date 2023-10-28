@@ -130,18 +130,18 @@ function displayTable() {
   content.innerHTML = tableContent;
 }
 function togglePasswordVisibility() {
-  const passwordField = document.getElementById("temat");
-  const passwordDisplay = document.getElementById("temat");
+  const passwordField = document.getElementById("temat1");
+  const passwordDisplay = document.getElementById("temat1");
   const showPasswordButton = document.querySelector(".show-password");
 
   if (passwordField.type === "password") {
     passwordDisplay.textContent = passwordField.value;
     passwordField.type = "text";
-    showPasswordButton.textContent = "Ukryj";
+    showPasswordButton.innerHTML = "<i class='fa-regular fa-eye-slash'></i>";
   } else {
     passwordDisplay.textContent = "";
     passwordField.type = "password";
-    showPasswordButton.textContent = "Pokaż";
+    showPasswordButton.innerHTML = "<i class='fa-regular fa-eye'></i>";
   }
 }
 function kontakt() {
@@ -149,15 +149,29 @@ function kontakt() {
   let email = document.getElementById("email").value;
   let temat = document.getElementById("temat").value;
   let wiadomosc = document.getElementById("wiadomosc").value;
+  let brakwiadomosc = document.getElementById("brakwiadomosc");
+  let braktext = document.getElementById("braktext");
+  let brakemail = document.getElementById("brakemail");
+  let zgodnosc = 0;
   if (zgoda.checked) {
     if (email == "") {
-      console.log("podaj email");
+      brakemail.textContent = "Podaj Email !!";
+    } else {
+      brakemail.textContent = "";
+      zgodnosc++;
     }
     if (temat == "") {
-      console.log("podaj temta");
+      braktext.textContent = "Podaj temat !!";
+    } else {
+      braktext.textContent = "";
+      zgodnosc++;
     }
+
     if (wiadomosc == "") {
-      console.log("podaj wiadomosc");
+      brakwiadomosc.textContent = "Podaj Wiadomość !!";
+    } else {
+      brakwiadomosc.textContent = "";
+      zgodnosc++;
     }
   } else {
     alert(
@@ -170,4 +184,30 @@ function kontakt() {
     let zgodastyle1 = document.querySelector("#zgoda");
     zgodastyle1.style.borderColor = "red";
   }
+  if (zgodnosc == 3) {
+    console.log(true);
+    // ----------------------------------------------------- WYNIK WYSYŁANIA ----------------------------------------------------
+  }
+}
+function zalogujsie() {
+  let emaillogin = document.getElementById("emaillogin").value;
+  let temat1 = document.getElementById("temat1").value;
+  let brakemailzal = document.getElementById("brakemailzal");
+  let brakpasszal = document.getElementById("brakpasszal");
+  let logincount = 0;
+  if (emaillogin == "") {
+    brakemailzal.textContent = "Podaj Prawidłowy Email !!";
+  } else {
+    if (emaillogin == "Adam123") {
+      logincount++;
+    }
+  }
+  if (temat1 == "") {
+    brakpasszal.textContent = "Podaj Prawidłowe Hasło";
+  } else {
+    if (temat1 == "Adam123") {
+      logincount++;
+    }
+  }
+  if (logincount == 2) alert("udało ci sie zalogować");
 }

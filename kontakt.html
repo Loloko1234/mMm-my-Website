@@ -183,7 +183,7 @@
         id="temat"
         class="input-kontakt"
         placeholder="Podaj Temat"
-      /><br />
+      /><div id="braktext" class="braktekstu"></div>
 
       <label for="email" class="label-kontakt">Kontakt</label
       ><input
@@ -192,9 +192,10 @@
         id="email"
         class="input-kontakt"
         placeholder="twój@email.com"
-      /><br />
+        
+      /><div id="brakemail" class="braktekstu"></div>
 
-      <label for="wiadomosc" class="label-kontakt">Wiadomość</label
+      <label for="wiadomosc" class="label-kontakt" id="wiadomosc-kontakt">Wiadomość</label
       ><textarea
         name="wiadomosc"
         id="wiadomosc"
@@ -208,11 +209,12 @@
           font-family: myfont;
         "
       ></textarea>
-      <br />
+      <div id="brakwiadomosc" class="braktekstu"></div>
 
-      <input type="checkbox" name="zgoda" id="zgoda" />
+      <input type="checkbox" name="zgoda1" id="zgoda" />
       <label for="zgoda" class="zgoda"><strong><span style="color:#d0121a;">UWAGA pole obowiązkowe (inaczej nie działa przycisk "wyślij"):</span><br /></strong></strong><p style="max-width: 500px; color: #bebebe;">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu obsługi wysłanego zgłoszenia.</p></label>
-        <input type="button" value="WYŚLIJ" class="button--podstrona">
+        <input type="button" value="WYŚLIJ" class="button--podstrona" onclick="kontakt()">
+        <script src="script.js"></script>
     </div>
   </body>
 </html>

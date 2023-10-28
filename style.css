@@ -491,7 +491,6 @@ li span:nth-child(2) {
 
 .kontakt input {
   display: inline-block;
-  color: #4b4b4b;
 }
 .naglowek-kontakt {
   padding-left: 30%;
@@ -536,4 +535,90 @@ li span:nth-child(2) {
   font-size: 20px;
   left: 100px;
   position: relative;
+}
+.button--podstrona:hover {
+  background-color: #199db8;
+  cursor: pointer;
+}
+.naglowek-zaloguj {
+  padding-left: 30%;
+  padding-top: 50px;
+  font-family: myfont;
+  font-size: 25px;
+}
+.button--zalogujsie {
+  border: none;
+  background-color: #24b9d7;
+  width: 200px;
+  height: 35px;
+  color: white;
+  font-weight: 600;
+  font-family: MyFont;
+  font-size: 20px;
+  top: 20px;
+  left: 157.5px;
+  position: relative;
+  border: #0d6a7c 1px solid;
+}
+.button--zalogujsie:hover {
+  background-color: #199db8;
+  cursor: pointer;
+}
+.zaloguj {
+  font-family: myfont;
+}
+.zaloguj label {
+  padding-right: 30px;
+}
+
+.input-zaloguj {
+  margin: 5px 0;
+  width: 250px;
+  height: 30px;
+  border-radius: 3px;
+  text-indent: 10px;
+  font-size: 15px;
+  border: 1px solid rgb(134, 134, 134);
+  background-color: #f1f0f0;
+  margin-bottom: 10px;
+}
+.zaloguj {
+  padding-left: 35%;
+  padding-top: 2%;
+}
+.label-zaloguj {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+.zaloguj input {
+  display: inline-block;
+}
+.naglowek-zaloguj {
+  padding-left: 30%;
+  padding-top: 50px;
+  font-family: myfont;
+}
+.show-password {
+  position: solid;
+  transform: translateX(-120%);
+  cursor: pointer;
+  width: 39px;
+  height: 25px;
+  border: 0px;
+  background-color: #f1f0f0;
+}
+#wiadomosc-kontakt {
+  position: relative;
+  bottom: 80px;
+}
+.braktekstu {
+  position: solid;
+  transform: translateX(65%);
+  color: #d0121a;
+  left: 12%;
+  margin-bottom: 10px;
+  max-width: 200px;
+  font-size: 13px;
 }

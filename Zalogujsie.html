@@ -177,20 +177,21 @@
     <h1 class="naglowek-zaloguj">Zaloguj się do swojego konta</h1>
     <div class="zaloguj">
       <label for="email" class="label-zaloguj">Email</label
-      ><input
-        type="email"
-        name="email"
-        id="email"
-        class="input-zaloguj"
-      /><br />
+      ><input type="email" name="email" id="emaillogin" class="input-zaloguj" />
+      <div id="brakemailzal" class="braktekstu"></div>
       <label for="temat" class="label-zaloguj">Hasło</label
-      ><input type="password" id="temat" class="input-zaloguj" /><br />
-
+      ><input type="password" id="temat1" class="input-zaloguj" />
       <button class="show-password" onclick="togglePasswordVisibility()">
-        Pokaż
+        <i class="fa-regular fa-eye"></i>
       </button>
+      <div id="brakpasszal" class="braktekstu"></div>
       <div id="passwordDisplay"></div>
-      <input type="button" value="ZALOGUJ" class="button--zalogujsie" />
+      <input
+        type="button"
+        value="ZALOGUJ"
+        class="button--zalogujsie"
+        onclick="zalogujsie()"
+      />
     </div>
     <script src="script.js"></script>
   </body>
