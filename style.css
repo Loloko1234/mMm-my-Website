@@ -110,6 +110,8 @@ input::placeholder {
   width: 300px;
   text-align: center;
   left: -190px;
+  border: 1px solid rgb(194, 194, 194);
+  min-height: 130px;
 }
 
 .koszyk-container:hover .koszyk-panel {
@@ -621,4 +623,82 @@ li span:nth-child(2) {
   margin-bottom: 10px;
   max-width: 200px;
   font-size: 13px;
+}
+.button--podstrona1 {
+  margin-top: 50px;
+  border: none;
+  background-color: #24b9d7;
+  width: 280px;
+  height: 42px;
+  color: white;
+  font-weight: 600;
+  font-family: MyFont;
+  font-size: 20px;
+}
+.button--podstrona1 {
+  background-color: #24b9d7;
+  width: 300px;
+  height: 42px;
+  color: white;
+  font-weight: 600;
+  font-family: MyFont;
+  font-size: 20px;
+  position: relative;
+}
+.button--podstrona1:hover {
+  background-color: #199db8;
+  cursor: pointer;
+  font-family: myfont;
+}
+.koszyk {
+  max-width: 150px;
+  max-height: 150px;
+  float: left;
+  font-family: myfont;
+}
+.koszyczek {
+  float: left;
+  position: relative;
+  top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  font-size: 13px;
+  font-family: myfont;
+}
+#koszykbutt {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px 10px 5px 10px;
+  background-color: #24b9d7;
+  color: white;
+  font-family: myfont;
+  border: 1px solid rgb(243, 243, 243);
+}
+#koszykbuttleft {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 100px;
+  height: 30px;
+  margin: 0px 10px 5px 0px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(250, 168, 168);
+  border: 1px solid rgb(243, 243, 243);
+  font-family: myfont;
+}
+#koszykbuttleft:hover {
+  cursor: pointer;
+  background-color: rgb(250, 198, 198);
+}
+#koszykbutt:hover {
+  cursor: pointer;
+  background-color: #1ea8c4;
+}
+#shopingcart {
+  padding: 50px;
 }

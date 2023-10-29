@@ -209,5 +209,58 @@ function zalogujsie() {
       logincount++;
     }
   }
-  if (logincount == 2) alert("udało ci sie zalogować");
+  if (logincount == 2) {
+    document.cookie = "userLoggedIn=true";
+    window.location.reload();
+  }
+}
+
+const userLoggedIn = document.cookie.includes("userLoggedIn=true");
+const zalogujsiee = document.querySelector(".login-button");
+console.log(document.cookie);
+if (userLoggedIn) {
+  zalogujsiee.textContent = "Adam";
+  zalogujsiee.href = "profile.html";
+  console.log("zalogowany");
+} else {
+  zalogujsiee.textContent = "Zaloguj się";
+  console.log("niezalogowany");
+}
+
+function wyloguj() {
+  document.cookie = "userLoggedIn=false";
+  alert("Udało ci się wylogować");
+  window.location.reload();
+}
+
+function DodajDoKoszyka() {
+  let ilosczamow = document.querySelector(".quantity-input").value;
+  let nazwaprod = document.querySelector(".naglowek--podstrona").textContent;
+  let koszykData = {
+    nazwa: nazwaprod,
+    ilosc: ilosczamow,
+  };
+  let koszykDataJSON = JSON.stringify(koszykData);
+
+  localStorage.setItem("koszyk", koszykDataJSON);
+  WyswietlKoszyk();
+}
+function WyswietlKoszyk() {
+  let koszyk1 = document.querySelector("#koszyk1");
+  let koszykDataJSON = localStorage.getItem("koszyk");
+
+  if (koszykDataJSON) {
+    let koszykData = JSON.parse(koszykDataJSON);
+    koszyk1.innerHTML = `<img class='koszyk' src='klawiatura.png'/><p class='koszyczek'>${koszykData.nazwa}</p><br><p class='koszyczek'>Szt. ${koszykData.ilosc}</p>`;
+  }
+}
+WyswietlKoszyk();
+function usunkoszyk() {
+  let koszykDataJSON = localStorage.getItem("koszyk");
+
+  if (koszykDataJSON) {
+    localStorage.removeItem("koszyk");
+    let koszyk1 = document.querySelector("#koszyk1");
+    koszyk1.innerHTML = `<i class="fa-solid fa-basket-shopping fa-2xl" id="shopingcart"></i>`;
+  }
 }
