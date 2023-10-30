@@ -49,16 +49,20 @@
       <div class="koszyk-container">
         <a id="koszyk" class="login-button">Koszyk</a>
         <div class="koszyk-panel">
-          <p id="koszyk1" class="kosz">
-            <i class="fa-solid fa-basket-shopping fa-2xl" id="shopingcart"></i>
-          </p>
+          <p id="koszyk1" class="kosz"></p>
           <p id="koszyk2" class="kosz"></p>
           <p id="koszyk3" class="kosz"></p>
           <p id="koszyk4" class="kosz"></p>
           <p id="koszyk5" class="kosz"></p>
           <p id="koszyk6" class="kosz"></p>
-          <button id="koszykbutt">DO KASY</button>
-          <button id="koszykbuttleft">Pokaz Koszyk</button>
+          <button id="koszykbutt" class="buttkoszyk2">DO KASY</button>
+          <button
+            id="koszykbuttleft"
+            onclick="usunkoszyk()"
+            class="buttkoszyk2"
+          >
+            <i class="fa-regular fa-trash-can fa-lg"></i>
+          </button>
         </div>
       </div>
       <!------------Koniec Login--------------->

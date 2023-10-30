@@ -233,34 +233,92 @@ function wyloguj() {
   window.location.reload();
 }
 
+const koszyki = [
+  document.querySelector("#koszyk1"),
+  document.querySelector("#koszyk2"),
+  document.querySelector("#koszyk3"),
+  document.querySelector("#koszyk4"),
+  document.querySelector("#koszyk5"),
+  document.querySelector("#koszyk6"),
+];
+
 function DodajDoKoszyka() {
   let ilosczamow = document.querySelector(".quantity-input").value;
   let nazwaprod = document.querySelector(".naglowek--podstrona").textContent;
-  let koszykData = {
-    nazwa: nazwaprod,
-    ilosc: ilosczamow,
-  };
-  let koszykDataJSON = JSON.stringify(koszykData);
 
-  localStorage.setItem("koszyk", koszykDataJSON);
-  WyswietlKoszyk();
-}
-function WyswietlKoszyk() {
-  let koszyk1 = document.querySelector("#koszyk1");
-  let koszykDataJSON = localStorage.getItem("koszyk");
+  // Iteruj przez koszyki, aby znaleźć pierwszy pusty
+  for (const koszyk of koszyki) {
+    if (koszyk.innerHTML === "") {
+      // Znaleziono pusty koszyk, dodaj element
+      const index = koszyki.indexOf(koszyk);
+      koszyk.innerHTML = `<img class='koszyk' src='klawiatura.png'/><p class='koszyczek'>${nazwaprod}</p><br><p class='koszyczek'>Szt. ${ilosczamow}</p></br><button onclick="usundanyprodukt(${index})">Usuń</button>`;
 
-  if (koszykDataJSON) {
-    let koszykData = JSON.parse(koszykDataJSON);
-    koszyk1.innerHTML = `<img class='koszyk' src='klawiatura.png'/><p class='koszyczek'>${koszykData.nazwa}</p><br><p class='koszyczek'>Szt. ${koszykData.ilosc}</p>`;
+      // Zapisz stan koszyków w Local Storage
+      ZapiszStanKoszykow(koszyki);
+      break;
+    }
   }
 }
-WyswietlKoszyk();
+
+function usundanyprodukt(index) {
+  koszyki[index].innerHTML = "";
+  const shopingcart = document.querySelector(".koszyk-panel");
+  shopingcart.style.backgroundImage = 'url("cart-shopping-solid (1).svg")';
+
+  // Zmieniaj styl tylko dla koszyka o indeksie `index`
+  document.querySelector("#koszykbutt").style.top = "85px";
+  document.querySelector("#koszykbuttleft").style.top = "85px";
+}
+
+// Funkcja do zapisywania stanu koszyków w Local Storage
+function ZapiszStanKoszykow(koszyki) {
+  const stanKoszykow = [];
+
+  for (const koszyk of koszyki) {
+    stanKoszykow.push(koszyk.innerHTML);
+  }
+  const shopingcart = document.querySelector(".koszyk-panel");
+  shopingcart.style.backgroundImage = "none";
+  koszmyk.style.top = "0px";
+  koszmyk1.style.top = "0px";
+  localStorage.setItem("stanKoszykow", JSON.stringify(stanKoszykow));
+}
+
+// Funkcja do wczytywania stanu koszyków z Local Storage
+function WczytajStanKoszykow(koszyki) {
+  const stanKoszykowJSON = localStorage.getItem("stanKoszykow");
+  if (stanKoszykowJSON) {
+    const stanKoszykow = JSON.parse(stanKoszykowJSON);
+
+    for (let i = 0; i < koszyki.length; i++) {
+      koszyki[i].innerHTML = stanKoszykow[i] || "";
+    }
+  }
+}
+
+WczytajStanKoszykow(koszyki);
 function usunkoszyk() {
-  let koszykDataJSON = localStorage.getItem("koszyk");
-
-  if (koszykDataJSON) {
-    localStorage.removeItem("koszyk");
-    let koszyk1 = document.querySelector("#koszyk1");
-    koszyk1.innerHTML = `<i class="fa-solid fa-basket-shopping fa-2xl" id="shopingcart"></i>`;
+  localStorage.removeItem("stanKoszykow");
+  WczytajStanKoszykow(koszyki);
+  for (let i = 0; i < koszyki.length; i++) {
+    const shopingcart = document.querySelector(".koszyk-panel");
+    shopingcart.style.backgroundImage = 'url("cart-shopping-solid (1).svg")';
+    koszyki[i].innerHTML = "";
+    koszmyk.style.top = "85px";
+    koszmyk1.style.top = "85px";
   }
+  console.log("a");
+}
+const shopingcart = document.querySelector(".koszyk-panel");
+let koszmyk = document.querySelector("#koszykbutt");
+let koszmyk1 = document.querySelector("#koszykbuttleft");
+if (koszyki[0].innerHTML != "") {
+  console.log("asa");
+  shopingcart.style.backgroundImage = "none";
+  koszmyk.style.top = "0";
+  koszmyk1.style.top = "0";
+}
+if (koszyki[0].innerHTML == "") {
+  koszmyk.style.top = "85px";
+  koszmyk1.style.top = "85px";
 }
