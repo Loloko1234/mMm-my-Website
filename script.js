@@ -214,18 +214,44 @@ function zalogujsie() {
     window.location.reload();
   }
 }
-
+//
+//
+//
+//
+//
+//
 const userLoggedIn = document.cookie.includes("userLoggedIn=true");
 const zalogujsiee = document.querySelector(".login-button");
-console.log(document.cookie);
+const loginpanel = document.querySelector(".login-panel");
+const loginpanel1 = document.querySelector(".login-panel1");
+const logincontainer = document.querySelector(".login-container");
+const body = document.querySelector(".body");
 if (userLoggedIn) {
   zalogujsiee.textContent = "Adam";
-  zalogujsiee.href = "profile.html";
-  console.log("zalogowany");
+  zalogujsiee.href = "javascript:void(0);";
+  loginpanel.style.display = "none";
+  document.addEventListener("click", function (event) {
+    if (!logincontainer.contains(event.target)) {
+      loginpanel1.style.display = "none";
+    }
+  });
+  logincontainer.addEventListener("click", function () {
+    if (loginpanel1.style.display === "block") {
+      loginpanel1.style.display = "none";
+    } else {
+      loginpanel1.style.display = "block";
+    }
+  });
 } else {
   zalogujsiee.textContent = "Zaloguj się";
   console.log("niezalogowany");
 }
+
+// -----------------------------------------------
+//
+//
+//
+// ---------------------------------------------------
 
 function wyloguj() {
   document.cookie = "userLoggedIn=false";
@@ -246,28 +272,48 @@ function DodajDoKoszyka() {
   let ilosczamow = document.querySelector(".quantity-input").value;
   let nazwaprod = document.querySelector(".naglowek--podstrona").textContent;
 
-  // Iteruj przez koszyki, aby znaleźć pierwszy pusty
-  for (const koszyk of koszyki) {
-    if (koszyk.innerHTML === "") {
-      // Znaleziono pusty koszyk, dodaj element
-      const index = koszyki.indexOf(koszyk);
-      koszyk.innerHTML = `<img class='koszyk' src='klawiatura.png'/><p class='koszyczek'>${nazwaprod}</p><br><p class='koszyczek'>Szt. ${ilosczamow}</p></br><button onclick="usundanyprodukt(${index})">Usuń</button>`;
+  // Iteruj przez koszyki, aby znaleźć produkt o takiej samej nazwie lub pusty
+  let foundIndex = -1;
 
-      // Zapisz stan koszyków w Local Storage
-      ZapiszStanKoszykow(koszyki);
+  for (const [index, koszyk] of koszyki.entries()) {
+    if (koszyk.innerHTML.includes(nazwaprod)) {
+      foundIndex = index;
+      break;
+    } else if (koszyk.innerHTML === "") {
+      foundIndex = index;
       break;
     }
   }
-}
 
+  if (foundIndex !== -1) {
+    const koszyk = koszyki[foundIndex];
+    const oldContent = koszyk.innerHTML;
+
+    if (oldContent.includes(nazwaprod)) {
+      // Aktualizuj ilość
+      const regex = /Szt\. \d+/;
+      const oldQuantity = parseInt(oldContent.match(regex)[0].split(" ")[1]);
+      const newQuantity = oldQuantity + parseInt(ilosczamow);
+      koszyk.innerHTML = oldContent.replace(regex, `Szt. ${newQuantity}`);
+    } else {
+      // Dodaj nowy produkt
+      koszyk.innerHTML = `<img class='koszyk' src='klawiatura.png'/><p class='koszyczek'>${nazwaprod}</p><br><p class='koszyczek'>Szt. ${ilosczamow}&nbsp;</p></br><button class="Usundany"onclick="usundanyprodukt(${foundIndex})"><i class="fa-regular fa-trash-can fa-lg"></i></button>`;
+    }
+
+    // Zapisz stan koszyków w Local Storage
+    ZapiszStanKoszykow(koszyki);
+  }
+}
 function usundanyprodukt(index) {
   koszyki[index].innerHTML = "";
+  ZapiszStanKoszykow(koszyki);
   const shopingcart = document.querySelector(".koszyk-panel");
-  shopingcart.style.backgroundImage = 'url("cart-shopping-solid (1).svg")';
-
-  // Zmieniaj styl tylko dla koszyka o indeksie `index`
-  document.querySelector("#koszykbutt").style.top = "85px";
-  document.querySelector("#koszykbuttleft").style.top = "85px";
+  if (koszyki.every((koszyk) => koszyk.innerHTML === "")) {
+    shopingcart.style.backgroundImage = 'url("cart-shopping-solid (1).svg")';
+    document.querySelector("#koszykbutt").style.top = "85px";
+    document.querySelector("#koszykbuttleft").style.top = "85px";
+    console.log("Koszyk jest pusty");
+  }
 }
 
 // Funkcja do zapisywania stanu koszyków w Local Storage
@@ -322,3 +368,7 @@ if (koszyki[0].innerHTML == "") {
   koszmyk.style.top = "85px";
   koszmyk1.style.top = "85px";
 }
+const przycisk = document.getElementById("przycisk");
+const przycisk1 = document.getElementById("przycisk1");
+const przycisk2 = document.getElementById("przycisk2");
+const przycisk3 = document.getElementById("przycisk3");

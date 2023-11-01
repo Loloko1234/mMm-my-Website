@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 @font-face {
   font-family: "MyFont";
@@ -35,19 +36,67 @@ header {
 .login-panel {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 91%;
+  left: 1px;
   background: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(194, 194, 194);
   width: 300px;
   text-align: center;
 }
-
+.login-panel1 {
+  display: none;
+  position: absolute;
+  top: 91%;
+  left: 1px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(194, 194, 194);
+  width: 150px;
+  height: auto;
+  text-align: center;
+  z-index: 1000;
+}
+.otherbuttons {
+  height: 40px;
+  width: 99%;
+  border: 1px solid rgb(240, 240, 240);
+  background-color: white;
+  font-size: 17px;
+  color: black;
+  font-family: myfont;
+}
+.asdar {
+  border: none;
+  background-color: white;
+}
+#przycisk,
+#przycisk1,
+#przycisk2 {
+  margin: 10px 0 10px;
+}
+.hrprofile {
+  width: 98%;
+}
+.otherbuttons:hover {
+  color: #24b9d7;
+}
+.wyloguj {
+  font-size: 17px;
+  font-family: myfont;
+  height: 40px;
+  width: 100%;
+  border: none;
+  background-color: white;
+}
+.wyloguj:hover {
+  color: #fd000d;
+}
 .login-container:hover .login-panel {
   display: block;
   z-index: 1000;
 }
-#Login {
+.login-inputs {
   padding: 10px;
   margin: 15px;
   width: 70%;
@@ -78,6 +127,7 @@ header {
   left: 26rem;
 }
 #search {
+  position: relative;
   width: 25%;
   height: 40%;
   margin-top: 30px;
@@ -109,7 +159,7 @@ input::placeholder {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   width: 300px;
   text-align: center;
-  left: -190px;
+  left: -195px;
   border: 1px solid rgb(194, 194, 194);
   min-height: 130px;
   background-image: url("cart-shopping-solid\ \(1\).svg");
@@ -725,4 +775,12 @@ li span:nth-child(2) {
 .kosz {
   float: left;
   position: relative;
+}
+.Usundany {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: rgb(250, 133, 133);
+}
+.Usundany:hover {
+  color: #d0121a;
 }

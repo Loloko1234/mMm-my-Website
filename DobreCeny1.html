@@ -14,7 +14,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
+  <body class="body">
     <header>
       <a href="index.html">
         <img src="logo.png" alt="" id="logo--top" onclick="" />
@@ -30,9 +30,26 @@
         >
         <div class="login-panel">
           <form>
-            <input type="text" name="Login" id="Login" placeholder="Email" />
-            <input type="text" name="Login" id="Login" placeholder="Hasło" />
-            <input type="button" value="ZALOGUJ SIE" id="login--button" />
+            <input
+              type="text"
+              name="Login"
+              id="emaillogin"
+              placeholder="Email"
+              class="login-inputs"
+            />
+            <input
+              type="text"
+              name="hasloo"
+              id="temat1"
+              placeholder="Hasło"
+              class="login-inputs"
+            />
+            <input
+              type="button"
+              value="ZALOGUJ SIE"
+              id="login--button"
+              onclick="zalogujsie()"
+            />
             <!----------Linki Login ------->
             <a
               href="http://https://sklep.kfd.pl/odzyskiwanie-hasla"
@@ -48,6 +65,23 @@
               id="Login--links"
               >Brak Konta?</a
             >
+          </form>
+        </div>
+        <div class="login-panel1">
+          <form>
+            <a href="profile.html" class="otherbuttons asdar">
+              <div id="przycisk">Profil</div>
+            </a>
+            <hr class="hrprofile" />
+            <a href="koszyk.html" class="otherbuttons asdar">
+              <div id="przycisk1">Koszyk</div>
+            </a>
+            <hr class="hrprofile" />
+            <a href="ustawienia.html" class="otherbuttons asdar">
+              <div id="przycisk2">Ustawienia</div>
+            </a>
+            <hr class="hrprofile" />
+            <button onclick="wyloguj()" class="wyloguj">Wyloguj Sie</button>
           </form>
         </div>
       </div>
