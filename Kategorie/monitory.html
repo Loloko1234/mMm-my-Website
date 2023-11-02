@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="body">
+    <header>
+      <a href="/index.html">
+        <img src="/logo.png" alt="" id="logo--top" onclick="" />
+      </a>
+      <input type="text" name="" id="search" placeholder="Czego szukasz?" />
+      <!---------------Login ----------->
+      <div class="login-container">
+        <a
+          href="/Zalogujsie.html"
+          class="login-button"
+          style="text-decoration: none"
+          >Zaloguj się</a
+        >
+        <div class="login-panel">
+          <form>
+            <input
+              type="text"
+              name="Login"
+              id="emaillogin"
+              placeholder="Email"
+              class="login-inputs"
+            />
+            <input
+              type="text"
+              name="hasloo"
+              id="temat1"
+              placeholder="Hasło"
+              class="login-inputs"
+            />
+            <input
+              type="button"
+              value="ZALOGUJ SIE"
+              id="login--button"
+              onclick="zalogujsie()"
+            />
+            <!----------Linki Login ------->
+            <a
+              href="http://https://sklep.kfd.pl/odzyskiwanie-hasla"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="Login--links"
+              >Zapomniałeś hasła?</a
+            ><br id="spacja" />
+            <a
+              href="http://https://sklep.kfd.pl/odzyskiwanie-hasla"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="Login--links"
+              >Brak Konta?</a
+            >
+          </form>
+        </div>
+        <div class="login-panel1">
+          <form>
+            <a href="/Profil/profil.html" class="otherbuttons asdar">
+              <div id="przycisk">Profil</div>
+            </a>
+            <hr class="hrprofile" />
+            <a href="/Profil/koszyk.html" class="otherbuttons asdar">
+              <div id="przycisk1">Koszyk</div>
+            </a>
+            <hr class="hrprofile" />
+            <a href="/Profil/ustawienia.html" class="otherbuttons asdar">
+              <div id="przycisk2">Ustawienia</div>
+            </a>
+            <hr class="hrprofile" />
+            <button onclick="wyloguj()" class="wyloguj">Wyloguj Sie</button>
+          </form>
+        </div>
+      </div>
+      <div class="koszyk-container">
+        <a id="koszyk" class="login-button">Koszyk</a>
+        <div class="koszyk-panel">
+          <p id="koszyk1" class="kosz"></p>
+          <p id="koszyk2" class="kosz"></p>
+          <p id="koszyk3" class="kosz"></p>
+          <p id="koszyk4" class="kosz"></p>
+          <p id="koszyk5" class="kosz"></p>
+          <p id="koszyk6" class="kosz"></p>
+          <button id="koszykbutt" class="buttkoszyk2">DO KASY</button>
+          <button
+            id="koszykbuttleft"
+            onclick="usunkoszyk()"
+            class="buttkoszyk2"
+          >
+            <i class="fa-regular fa-trash-can fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <!------------Koniec Login--------------->
+    </header>
+    <!--------Lower Header--------->
+    <!-------Zrobic zeby a wypełniało całego spana-->
+    <div class="lower--header">
+      <span class="a--hover" href="/Kategorie/kategorie.html">
+        <a href="/Kategorie/kategorie.html" class="a--header--lower"
+          >KATEGORIE
+          <i class="fa-solid fa-caret-down" style="color: #ffffff"></i
+        ></a>
+        <div class="subcategory">
+          <div class="kategorie">
+            <a href="/Kategorie/klawiatury.html" id="subcategory--a"
+              >Klawiatury
+              <i
+                class="fa-solid fa-chevron-right"
+                style="
+                  color: #636363;
+                  font-size: 10px;
+                  vertical-align: middle;
+                  margin-bottom: 4px;
+                "
+              ></i>
+            </a>
+            <br /><br />
+
+            <a
+              class="a--kategorie"
+              href="/Kategorie/myszki.html"
+              id="subcategory--a"
+              >Myszki
+              <i
+                class="fa-solid fa-chevron-right"
+                style="
+                  color: #636363;
+                  font-size: 10px;
+                  vertical-align: middle;
+                  margin-bottom: 4px;
+                "
+              ></i>
+            </a>
+            <br /><br />
+            <a
+              class="a--kategorie"
+              href="/Kategorie/komputery.html"
+              id="subcategory--a"
+              >Komputery
+              <i
+                class="fa-solid fa-chevron-right"
+                style="
+                  color: #636363;
+                  font-size: 10px;
+                  vertical-align: middle;
+                  margin-bottom: 4px;
+                "
+              ></i>
+            </a>
+            <br /><br />
+            <a
+              class="a--kategorie"
+              href="/Kategorie/monitory.html"
+              id="subcategory--a"
+              >Monitory
+              <i
+                class="fa-solid fa-chevron-right"
+                style="
+                  color: #636363;
+                  font-size: 10px;
+                  vertical-align: middle;
+                  margin-bottom: 4px;
+                "
+              ></i>
+            </a>
+            <br /><br />
+            <a class="a--kategorie" id="subcategory--a"
+              >Podkategoria 5
+              <i
+                class="fa-solid fa-chevron-right"
+                style="
+                  color: #636363;
+                  font-size: 10px;
+                  vertical-align: middle;
+                  margin-bottom: 4px;
+                "
+              ></i>
+            </a>
+            <br /><br />
+            <a class="a--kategorie" id="subcategory--a"
+              >Podkategoria 6
+              <i
+                class="fa-solid fa-chevron-right"
+                style="
+                  color: #636363;
+                  font-size: 10px;
+                  vertical-align: middle;
+                  margin-bottom: 4px;
+                "
+              ></i>
+            </a>
+          </div>
+        </div>
+      </span>
+      <span class="a--hover" href="/producenci.html">
+        <a href="/producenci.html" class="a--header--lower"
+          >PRODUCENCI
+          <i class="fa-solid fa-caret-down" style="color: #ffffff"></i
+        ></a>
+
+        <div class="subcategory">
+          <p>Spc Gear</p>
+          <p>Genesis</p>
+          <p>Lenovo</p>
+          <p>Msi</p>
+          <p>Koorui</p>
+          <p>CarOK</p>
+        </div>
+      </span>
+      <a class="a--hover" href="/dostawaiplatonosc.html">
+        <i class="fa-solid fa-truck" style="color: #ffffff"></i>
+        DOSTAWA/PŁATNOŚĆ
+      </a>
+      <a class="a--hover" href="/OmMm.html">
+        <i class="fa-solid fa-heart" style="color: #ffffff"></i> O mMm
+      </a>
+      <a class="a--hover" href="/regulamin.html">
+        <i class="fa-regular fa-circle-question"></i> POMOC
+      </a>
+      <a class="a--hover" href="/kontakt.html">
+        <i class="fa-solid fa-envelope" style="color: #ffffff"></i> KONTAKT
+      </a>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
