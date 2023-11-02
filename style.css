@@ -783,4 +783,75 @@ li span:nth-child(2) {
 }
 .Usundany:hover {
   color: #d0121a;
+  cursor: pointer;
+}
+.koszyk-p {
+  float: left;
+  padding: 50px 150px 10px 10px;
+  position: solid;
+  border-bottom: rgb(223, 223, 223) 5px solid;
+  margin-left: 5px;
+  font-family: myfont;
+  font-size: 20px;
+}
+.top-koszyk {
+  margin-left: 25%;
+  width: 100%;
+}
+.koszyk-p:first-child {
+  border-bottom: rgb(8, 8, 49) 5px solid;
+}
+#koszyk-podsumowanie {
+  text-align: center;
+}
+.nowaKlasa {
+  position: absolute;
+  float: left;
+  top: 20rem;
+  left: 450px;
+}
+.nowaKlasa .koszyk {
+  width: 400px;
+  height: 200px;
+  max-width: 400px;
+  max-height: 200px;
+}
+.nowaKlasa .koszyczek {
+  font-size: 30px;
+  max-width: 1000px;
+}
+.nowaKlasa .fa-trash-can {
+  font-size: 30px;
+  margin-top: 40px;
+  position: absolute;
+  right: 150px;
+  top: 40px;
+}
+.nowaKlasa .niewiem:hover {
+  background-color: rgb(243, 243, 243);
+}
+.wszytko:hover {
+  color: blue;
+}
+.dostawaplatnosc {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #005464;
+  background-color: #24b9d7;
+  color: white;
+  position: absolute;
+  float: left;
+  top: 40%;
+  right: 10%;
+}
+.dostawaplatnosc1 {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #005464;
+  background-color: #24b9d7;
+  color: white;
+  position: absolute;
+  float: left;
+  top: 45%;
+  right: 10%;
 }

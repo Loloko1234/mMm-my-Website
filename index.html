@@ -14,7 +14,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
+  <body class="body">
     <header>
       <a href="index.html">
         <img src="logo.png" alt="" id="logo--top" onclick="" />
@@ -22,12 +22,34 @@
       <input type="text" name="" id="search" placeholder="Czego szukasz?" />
       <!---------------Login ----------->
       <div class="login-container">
-        <a href="Zalogujsie.html"class="login-button" style="text-decoration: none;">Zaloguj się</a>
+        <a
+          href="Zalogujsie.html"
+          class="login-button"
+          style="text-decoration: none"
+          >Zaloguj się</a
+        >
         <div class="login-panel">
           <form>
-            <input type="text" name="Login" id="Login" placeholder="Email" />
-            <input type="text" name="Login" id="Login" placeholder="Hasło" />
-            <input type="button" value="ZALOGUJ SIE" id="login--button" />
+            <input
+              type="text"
+              name="Login"
+              id="emaillogin"
+              placeholder="Email"
+              class="login-inputs"
+            />
+            <input
+              type="text"
+              name="hasloo"
+              id="temat1"
+              placeholder="Hasło"
+              class="login-inputs"
+            />
+            <input
+              type="button"
+              value="ZALOGUJ SIE"
+              id="login--button"
+              onclick="zalogujsie()"
+            />
             <!----------Linki Login ------->
             <a
               href="http://https://sklep.kfd.pl/odzyskiwanie-hasla"
@@ -43,6 +65,23 @@
               id="Login--links"
               >Brak Konta?</a
             >
+          </form>
+        </div>
+        <div class="login-panel1">
+          <form>
+            <a href="Profil/profil.html" class="otherbuttons asdar">
+              <div id="przycisk">Profil</div>
+            </a>
+            <hr class="hrprofile" />
+            <a href="Profil/koszyk.html" class="otherbuttons asdar">
+              <div id="przycisk1">Koszyk</div>
+            </a>
+            <hr class="hrprofile" />
+            <a href="Profil/ustawienia.html" class="otherbuttons asdar">
+              <div id="przycisk2">Ustawienia</div>
+            </a>
+            <hr class="hrprofile" />
+            <button onclick="wyloguj()" class="wyloguj">Wyloguj Sie</button>
           </form>
         </div>
       </div>
@@ -70,14 +109,14 @@
     <!--------Lower Header--------->
     <!-------Zrobic zeby a wypełniało całego spana-->
     <div class="lower--header">
-      <span class="a--hover" href="#">
-        <a href="http://" class="a--header--lower"
+      <span class="a--hover" href="Kategorie/kategorie.html">
+        <a href="Kategorie/kategorie.html" class="a--header--lower"
           >KATEGORIE
           <i class="fa-solid fa-caret-down" style="color: #ffffff"></i
         ></a>
         <div class="subcategory">
           <div class="kategorie">
-            <a href="https://www.facebook.com" id="subcategory--a"
+            <a href="Kategorie/klawiatury.html" id="subcategory--a"
               >Klawiatury
               <i
                 class="fa-solid fa-chevron-right"
@@ -91,7 +130,10 @@
             </a>
             <br /><br />
 
-            <a class="a--kategorie"
+            <a
+              class="a--kategorie"
+              href="Kategorie/myszki.html"
+              id="subcategory--a"
               >Myszki
               <i
                 class="fa-solid fa-chevron-right"
@@ -104,7 +146,10 @@
               ></i>
             </a>
             <br /><br />
-            <a class="a--kategorie"
+            <a
+              class="a--kategorie"
+              href="Kategorie/komputery.html"
+              id="subcategory--a"
               >Komputery
               <i
                 class="fa-solid fa-chevron-right"
@@ -117,7 +162,10 @@
               ></i>
             </a>
             <br /><br />
-            <a class="a--kategorie"
+            <a
+              class="a--kategorie"
+              href="Kategorie/monitory.html"
+              id="subcategory--a"
               >Monitory
               <i
                 class="fa-solid fa-chevron-right"
@@ -130,7 +178,7 @@
               ></i>
             </a>
             <br /><br />
-            <a class="a--kategorie"
+            <a class="a--kategorie" id="subcategory--a"
               >Podkategoria 5
               <i
                 class="fa-solid fa-chevron-right"
@@ -143,7 +191,7 @@
               ></i>
             </a>
             <br /><br />
-            <a class="a--kategorie"
+            <a class="a--kategorie" id="subcategory--a"
               >Podkategoria 6
               <i
                 class="fa-solid fa-chevron-right"
@@ -165,12 +213,12 @@
         ></a>
 
         <div class="subcategory">
-          <p>Podkategoria 1</p>
-          <p>Podkategoria 2</p>
-          <p>Podkategoria 3</p>
-          <p>Podkategoria 3</p>
-          <p>Podkategoria 3</p>
-          <p>Podkategoria 3</p>
+          <p>Spc Gear</p>
+          <p>Genesis</p>
+          <p>Lenovo</p>
+          <p>Msi</p>
+          <p>Koorui</p>
+          <p>CarOK</p>
         </div>
       </span>
       <a class="a--hover" href="dostawaiplatonosc.html">
@@ -183,6 +231,7 @@
       <a class="a--hover" href="regulamin.html">
         <i class="fa-regular fa-circle-question"></i> POMOC
       </a>
+
       <a class="a--hover" href="kontakt.html">
         <i class="fa-solid fa-envelope" style="color: #ffffff"></i> KONTAKT
       </a>

@@ -69,15 +69,15 @@
         </div>
         <div class="login-panel1">
           <form>
-            <a href="profile.html" class="otherbuttons asdar">
+            <a href="Profil/profil.html" class="otherbuttons asdar">
               <div id="przycisk">Profil</div>
             </a>
             <hr class="hrprofile" />
-            <a href="koszyk.html" class="otherbuttons asdar">
+            <a href="Profil/koszyk.html" class="otherbuttons asdar">
               <div id="przycisk1">Koszyk</div>
             </a>
             <hr class="hrprofile" />
-            <a href="ustawienia.html" class="otherbuttons asdar">
+            <a href="Profil/ustawienia.html" class="otherbuttons asdar">
               <div id="przycisk2">Ustawienia</div>
             </a>
             <hr class="hrprofile" />
@@ -109,14 +109,14 @@
     <!--------Lower Header--------->
     <!-------Zrobic zeby a wypełniało całego spana-->
     <div class="lower--header">
-      <span class="a--hover" href="#">
-        <a href="http://" class="a--header--lower"
+      <span class="a--hover" href="Kategorie/kategorie.html">
+        <a href="Kategorie/kategorie.html" class="a--header--lower"
           >KATEGORIE
           <i class="fa-solid fa-caret-down" style="color: #ffffff"></i
         ></a>
         <div class="subcategory">
           <div class="kategorie">
-            <a href="https://www.facebook.com" id="subcategory--a"
+            <a href="Kategorie/klawiatury.html" id="subcategory--a"
               >Klawiatury
               <i
                 class="fa-solid fa-chevron-right"
@@ -130,7 +130,10 @@
             </a>
             <br /><br />
 
-            <a class="a--kategorie"
+            <a
+              class="a--kategorie"
+              href="Kategorie/myszki.html"
+              id="subcategory--a"
               >Myszki
               <i
                 class="fa-solid fa-chevron-right"
@@ -143,7 +146,10 @@
               ></i>
             </a>
             <br /><br />
-            <a class="a--kategorie"
+            <a
+              class="a--kategorie"
+              href="Kategorie/komputery.html"
+              id="subcategory--a"
               >Komputery
               <i
                 class="fa-solid fa-chevron-right"
@@ -156,7 +162,10 @@
               ></i>
             </a>
             <br /><br />
-            <a class="a--kategorie"
+            <a
+              class="a--kategorie"
+              href="Kategorie/monitory.html"
+              id="subcategory--a"
               >Monitory
               <i
                 class="fa-solid fa-chevron-right"
@@ -169,7 +178,7 @@
               ></i>
             </a>
             <br /><br />
-            <a class="a--kategorie"
+            <a class="a--kategorie" id="subcategory--a"
               >Podkategoria 5
               <i
                 class="fa-solid fa-chevron-right"
@@ -182,7 +191,7 @@
               ></i>
             </a>
             <br /><br />
-            <a class="a--kategorie"
+            <a class="a--kategorie" id="subcategory--a"
               >Podkategoria 6
               <i
                 class="fa-solid fa-chevron-right"
@@ -204,12 +213,12 @@
         ></a>
 
         <div class="subcategory">
-          <p>Podkategoria 1</p>
-          <p>Podkategoria 2</p>
-          <p>Podkategoria 3</p>
-          <p>Podkategoria 3</p>
-          <p>Podkategoria 3</p>
-          <p>Podkategoria 3</p>
+          <p>Spc Gear</p>
+          <p>Genesis</p>
+          <p>Lenovo</p>
+          <p>Msi</p>
+          <p>Koorui</p>
+          <p>CarOK</p>
         </div>
       </span>
       <a class="a--hover" href="dostawaiplatonosc.html">
@@ -222,6 +231,7 @@
       <a class="a--hover" href="regulamin.html">
         <i class="fa-regular fa-circle-question"></i> POMOC
       </a>
+
       <a class="a--hover" href="kontakt.html">
         <i class="fa-solid fa-envelope" style="color: #ffffff"></i> KONTAKT
       </a>
@@ -242,7 +252,7 @@
             ><i class="fa-regular fa-star-half-stroke"></i>
           </p>
           <br />
-          <h1 class="naglowek--cena">149.99 zł</h1>
+          <h1 class="naglowek--cena" id="cena">149.99 zł</h1>
           <div class="quantity-control">
             <input
               type="button"
@@ -295,7 +305,7 @@
         </span>
       </div>
     </div>
-
+    <p id="suma-cen"></p>
     <script src="script.js"></script>
   </body>
 </html>

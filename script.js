@@ -267,7 +267,6 @@ const koszyki = [
   document.querySelector("#koszyk5"),
   document.querySelector("#koszyk6"),
 ];
-
 function DodajDoKoszyka() {
   let ilosczamow = document.querySelector(".quantity-input").value;
   let nazwaprod = document.querySelector(".naglowek--podstrona").textContent;
@@ -297,7 +296,7 @@ function DodajDoKoszyka() {
       koszyk.innerHTML = oldContent.replace(regex, `Szt. ${newQuantity}`);
     } else {
       // Dodaj nowy produkt
-      koszyk.innerHTML = `<img class='koszyk' src='klawiatura.png'/><p class='koszyczek'>${nazwaprod}</p><br><p class='koszyczek'>Szt. ${ilosczamow}&nbsp;</p></br><button class="Usundany"onclick="usundanyprodukt(${foundIndex})"><i class="fa-regular fa-trash-can fa-lg"></i></button>`;
+      koszyk.innerHTML = `<a class="wszytko"href="${window.location.href}"><img class='koszyk' src='klawiatura.png'/><p class='koszyczek'}">${nazwaprod}</p><br><p class='koszyczek'>Szt. ${ilosczamow}&nbsp;</p></a></br><button class="Usundany"onclick="usundanyprodukt(${foundIndex})"><i class="fa-regular fa-trash-can fa-lg"></i></button>`;
     }
 
     // Zapisz stan koszyków w Local Storage
@@ -307,6 +306,7 @@ function DodajDoKoszyka() {
 function usundanyprodukt(index) {
   koszyki[index].innerHTML = "";
   ZapiszStanKoszykow(koszyki);
+
   const shopingcart = document.querySelector(".koszyk-panel");
   if (koszyki.every((koszyk) => koszyk.innerHTML === "")) {
     shopingcart.style.backgroundImage = 'url("cart-shopping-solid (1).svg")';
@@ -314,6 +314,9 @@ function usundanyprodukt(index) {
     document.querySelector("#koszykbuttleft").style.top = "85px";
     console.log("Koszyk jest pusty");
   }
+  const koszykPodsumowanie = document.querySelector("#koszyk-podsumowanie");
+  const usunietyProdukt = koszykPodsumowanie.children[index];
+  koszykPodsumowanie.removeChild(usunietyProdukt);
 }
 
 // Funkcja do zapisywania stanu koszyków w Local Storage
@@ -372,3 +375,20 @@ const przycisk = document.getElementById("przycisk");
 const przycisk1 = document.getElementById("przycisk1");
 const przycisk2 = document.getElementById("przycisk2");
 const przycisk3 = document.getElementById("przycisk3");
+function WczytajKoszykPodsumowanie() {
+  const koszykPodsumowanie = document.querySelector("#koszyk-podsumowanie");
+  const stanKoszykowJSON = localStorage.getItem("stanKoszykow");
+
+  if (stanKoszykowJSON) {
+    const stanKoszykow = JSON.parse(stanKoszykowJSON);
+
+    for (const stanKoszyka of stanKoszykow) {
+      const produktPodsumowanie = document.createElement("div");
+      produktPodsumowanie.classList.add("nowaKlasa");
+      produktPodsumowanie.innerHTML = stanKoszyka;
+      koszykPodsumowanie.appendChild(produktPodsumowanie);
+    }
+  }
+}
+
+WczytajKoszykPodsumowanie();
